@@ -24,9 +24,13 @@ const location = useLocation()
         <Col>
         <ul style={{ listStyle: 'none' }}>
           {companyAdd.map((company, i)=>(
-            <li key={i} style={{ border: '1px solid #00000033', borderRadius: 4 }}>
+            <>
+            <div style={{ border: '1px solid #00000033', borderRadius: 4 }} className="d-flex flex-row p-3 mt-4">
+            <li key={i} >
               {<a href={company.company_name} target="_blank" rel="noreferrer">{company.company_name}</a>}
+            </li>
             <Button
+            className="ms-auto me-2"
             variant="danger"
             onClick={() => {
               dispatch({
@@ -37,7 +41,8 @@ const location = useLocation()
           >
            - {/* <FaTrash/> */}
           </Button>
-            </li>
+          </div>
+          </>
           ))}
         </ul>
         </Col>
