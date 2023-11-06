@@ -1,7 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-// import { FaTrash } from 'react-icons/fa'
+import { FaTrash } from 'react-icons/fa'
 
 const FavoriteCompany = () => {
   const companyAdd = useSelector((state) => state.cart.content)
@@ -39,7 +39,7 @@ const location = useLocation()
               })
             }}
           >
-           - {/* <FaTrash/> */}
+            <FaTrash/>
           </Button>
           </div>
           </>
